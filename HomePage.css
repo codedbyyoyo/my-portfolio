@@ -239,7 +239,6 @@ a{
     display: flex;
     flex-direction: column;
     margin: 0 0;
-    margin-bottom: 30vh;
     font-family: "Space Grotesk", sans-serif;
     width:  70vw;
 }
@@ -256,7 +255,8 @@ a{
     flex-direction: column;
     align-items: center;
     height: 120%;
-    gap: 30vh;
+    gap: 20vh;
+    margin-bottom: 8vh;
 }
 .projects{
     position: relative;
@@ -371,6 +371,7 @@ a{
     width: 80%;
     font-size: clamp(1.2rem, 2vw, 1.8rem);
     font-weight: normal;
+    padding-right: 10px;
     margin-bottom: 4vh;
 }
 .click-description p{
@@ -406,11 +407,6 @@ a{
     max-height: 800px;
     height: clamp(550px, 90vh, 800px);
     width: clamp(280px, 80%, 850px);
-    animation: expand 400ms ease-in-out forwards;
-}
-@keyframes expand{
-    from{width: clamp(250px, 50%, 700px); max-height: 525px;}
-    to{width: clamp(280px, 80%, 850px); max-height: 800px;}
 }
 .projects.expanded .project-img-wrapper{
     position: relative;
@@ -418,18 +414,13 @@ a{
     width: clamp(100px, 40%, 530px);
     aspect-ratio: 4/3;
     margin: 5vh 2vh;
-    animation: pic-scale-down 200ms forwards ease-in-out;
-}
-@keyframes pic-scale-down{
-    from{width: 50%;}
-    to{width: clamp(100px, 40%, 530px);}
 }
 .projects.expanded .project-imgs{
     opacity: 0.8;
 }
 .projects.expanded .click-description{
     display: inline;
-    animation: fade-in 500ms linear forwards;
+    animation: fade-in 600ms linear forwards;
 }
 @keyframes fade-in{
     0%{opacity: 0;}
