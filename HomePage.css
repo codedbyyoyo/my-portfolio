@@ -417,6 +417,7 @@ a{
     max-height: 800px;
     height: clamp(550px, 90vh, 800px);
     width: clamp(280px, 80%, 850px);
+    transition: width 400ms ease-out;
 }
 .projects.expanded .project-img-wrapper{
     position: relative;
@@ -430,6 +431,7 @@ a{
 }
 .projects.expanded .click-description{
     display: inline;
+    animation: fade-in 600ms linear forwards;
 }
 @keyframes fade-in{
     0%{opacity: 0;}
