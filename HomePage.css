@@ -240,7 +240,8 @@ a{
     flex-direction: column;
     margin: 0 0;
     font-family: "Space Grotesk", sans-serif;
-    width:  70vw;
+    width: 70vw;
+    margin-bottom: 8vh;
 }
 .projects-title{
     display: flex;
@@ -254,9 +255,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 120%;
     gap: 20vh;
-    margin-bottom: 8vh;
 }
 .projects{
     position: relative;
@@ -338,6 +337,11 @@ a{
         animation: text-slide-up 0.2s ease-in-out forwards;
         opacity: 0;
     }
+    .projects.hidden{
+        opacity: 0;
+        transform: scale(0.8);
+        transition: all 1s;
+    }
 }
 @media (max-width: 900px) {
     .hover-overlay{
@@ -354,6 +358,11 @@ a{
     }
     .projects:not(.expanded):hover{
         transform: scale(1.1);
+    }
+    .projects.hidden{
+        opacity: 0;
+        transform: none;
+        transition: all 1s;
     }
 }
 @keyframes text-slide-up{
@@ -434,7 +443,8 @@ a{
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    height: 100%;
+    padding-bottom: 10%;
 }
 .projects-title.hidden{
     opacity: 0;
@@ -452,11 +462,6 @@ a{
 .main-txt.show{
     opacity: 1;
     transform: scale(1);
-}
-.projects.hidden{
-    opacity: 0;
-    transform: scale(0.8);
-    transition: all 1s;
 }
 .projects.show{
     opacity: 1;
