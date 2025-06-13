@@ -85,7 +85,7 @@ a{
     width: 95vw;
     display: flex;
     align-items: center;
-    margin: 2vh 0;
+    margin: 2dvh 0;
 }
 .socials button{
     font-size: clamp(2rem, 2vw, 3rem);
@@ -122,13 +122,13 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 80vh;
+    gap: 80dvh;
 }
 .about-me{
     display: flex;
     flex-direction: column;
     margin: 0 8vw;
-    margin-top: 30vh;
+    margin-top: 30dvh;
     font-family: "Space Grotesk", sans-serif;
     width:  70vw;
 }
@@ -241,7 +241,7 @@ a{
     margin: 0 0;
     font-family: "Space Grotesk", sans-serif;
     width: 70vw;
-    margin-bottom: 8vh;
+    margin-bottom: 8dvh;
 }
 .projects-title{
     display: flex;
@@ -352,7 +352,7 @@ a{
         opacity: 0;
     }
     .projects.projects:not(.expanded){
-        transition: all 300ms;
+        transition: transform 300ms;
     }
     .projects:not(.expanded):hover{
         transform: scale(1.1);
