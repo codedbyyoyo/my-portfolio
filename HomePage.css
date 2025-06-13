@@ -94,7 +94,7 @@ a{
     color: hsl(0, 0%, 96%);
     border: none;
     cursor: pointer;
-    transition: all 200ms;
+    transition: color 200ms, transform 200ms;
 }
 #email{
     font-family: "Space Grotesk", sans-serif;
@@ -108,7 +108,7 @@ a{
     margin-left: auto;
 }
 .icons{
-    transition: all 200ms;
+    transition: color 200ms, transform 200ms;
 }
 .icons:hover{
     color: hsl(266, 100%, 67%);
@@ -265,6 +265,7 @@ a{
     width: clamp(250px, 50%, 700px);
     max-height: 525px;
     overflow: hidden;
+
 }
 #project1{
     margin-top: 15vh;
@@ -340,7 +341,7 @@ a{
     .projects.hidden{
         opacity: 0;
         transform: scale(0.8);
-        transition: all 1s;
+        transition: transform 1s, opacity 1s;
     }
 }
 @media (max-width: 900px) {
@@ -354,7 +355,7 @@ a{
         opacity: 0;
     }
     .projects.projects:not(.expanded){
-        transition: all 300ms ease-in-out;
+        transition: all 300ms;
     }
     .projects:not(.expanded):hover{
         transform: scale(1.1);
@@ -362,7 +363,7 @@ a{
     .projects.hidden{
         opacity: 0;
         transform: none;
-        transition: all 1s;
+        transition: opacity 1s;
     }
 }
 @keyframes text-slide-up{
@@ -419,8 +420,8 @@ a{
 }
 .projects.expanded .project-img-wrapper{
     position: relative;
-    height: auto;
-    width: clamp(100px, 40%, 530px);
+    min-height: 120px;
+    width: clamp(160px, 40%, 530px);
     aspect-ratio: 4/3;
     margin: 5vh 2vh;
 }
@@ -429,7 +430,6 @@ a{
 }
 .projects.expanded .click-description{
     display: inline;
-    animation: fade-in 600ms linear forwards;
 }
 @keyframes fade-in{
     0%{opacity: 0;}
@@ -448,7 +448,7 @@ a{
 }
 .projects-title.hidden{
     opacity: 0;
-    transition: all 1s;
+    transition: transform 1s;
     transform: translateX(0);
 }
 .projects-title.show{
@@ -457,7 +457,7 @@ a{
 .main-txt.hidden{
     opacity: 0;
     transform: scale(0.6);
-    transition: all 1s;
+    transition: transform 1s;
 }
 .main-txt.show{
     opacity: 1;
@@ -470,7 +470,7 @@ a{
 .hidden{
     opacity: 0.3;
     transform: translateX(-30%);
-    transition: all 1s;
+    transition: transform 1s;
 }
 .show{
     opacity: 1;
