@@ -17,7 +17,7 @@ a{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100dvh;
+    height: 100svh;
 }
 #main-txt-content{
     margin: 0;
@@ -42,7 +42,7 @@ a{
     position: relative;
     top: 15%;
     opacity: 0.5;
-    height: clamp(60px, 20dvh, 200px);
+    height: clamp(60px, 20svh, 200px);
     width: clamp(100px, 40vw, 400px);
     animation: bounce 3s ease-in-out infinite;
 }
@@ -122,13 +122,13 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 80dvh;
+    gap: 80svh;
 }
 .about-me{
     display: flex;
     flex-direction: column;
     margin: 0 8vw;
-    margin-top: 30dvh;
+    margin-top: 30svh;
     font-family: "Space Grotesk", sans-serif;
     width:  70vw;
 }
@@ -149,7 +149,7 @@ a{
     padding: 1rem 1rem;
     margin: 3% 5%;
     font-size: clamp(1.5rem, 6vw, 2.25rem);
-    height: 12dvh;
+    height: 12svh;
     border-bottom: 1px solid hsl(0, 0%, 97%);
 }
 #about-me-body{
@@ -184,7 +184,7 @@ a{
     padding: 1rem 1rem;
     margin: 3% 5%;
     font-size: clamp(1.5rem, 6vw, 2.25rem);
-    height: 12dvh;
+    height: 12svh;
     border-bottom: 1px solid hsl(0, 0%, 97%);
 }
 .skills-container{
@@ -192,7 +192,7 @@ a{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 15dvh;
+    height: 15svh;
     gap: 0 10vw;
     margin: 0 8%;
     color: #AAAAAA;
@@ -216,7 +216,7 @@ a{
     padding: 1rem 1rem;
     margin: 3% 5%;
     font-size: clamp(1.5rem, 6vw, 2.25rem);
-    height: 12dvh;
+    height: 12svh;
     border-bottom: 1px solid hsl(0, 0%, 97%);
 }
 .exp-body{
@@ -241,14 +241,14 @@ a{
     margin: 0 0;
     font-family: "Space Grotesk", sans-serif;
     width: 70vw;
-    margin-bottom: 8dvh;
+    margin-bottom: 8svh;
 }
 .projects-title{
     display: flex;
     align-items: center;
     margin: 3% 5%;
     font-size: clamp(1rem, 6vw, 2.25rem);
-    height: 12dvh;
+    height: 12svh;
     border-bottom: 1px solid hsl(0, 0%, 97%);
 }
 .projects-container{
@@ -412,7 +412,7 @@ a{
     align-items: center;
     flex-direction: column;
     max-height: 800px;
-    height: clamp(550px, 90dvh, 800px);
+    height: clamp(550px, 90svh, 800px);
     width: clamp(280px, 80%, 850px);
     transition: width 400ms ease-out;
 }
@@ -421,7 +421,7 @@ a{
     min-height: 120px;
     width: clamp(160px, 40%, 530px);
     aspect-ratio: 4/3;
-    margin: 5vh 2vh;
+    margin: 5vh 0;
 }
 .projects.expanded .project-imgs{
     opacity: 0.8;
