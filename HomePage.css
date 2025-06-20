@@ -1,3 +1,4 @@
+/* TODO: Add variables for colors and fonts. */
 body{
     margin: 0;
     background-color: hsl(0, 0%, 5%);
@@ -117,23 +118,22 @@ a{
   color: hsl(266, 88%, 59%);
   transform: scale(0.97);
 }
+/* TODO: Improve this gap workaround. It's janky, but works for now. */
 .main-body-content{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 80svh;
+    margin-top: 15rem;
+    row-gap: 40rem;
+    margin-bottom: 10rem;
 }
+/* TODO: Add a container class that has all the commonly used styles. */
 .about-me{
     display: flex;
     flex-direction: column;
-    margin: 0 8vw;
-    margin-top: 30svh;
     font-family: "Space Grotesk", sans-serif;
     width:  70vw;
-}
-#about-me1{
-    margin-right: 10px;
 }
 #about-me2{
     margin-left: auto;
@@ -146,8 +146,7 @@ a{
 .about-me-title{
     display: flex;
     align-items: center;
-    padding: 1rem 1rem;
-    margin: 3% 5%;
+    padding: 0 2rem;
     font-size: clamp(1.5rem, 6vw, 2.25rem);
     height: 12svh;
     border-bottom: 1px solid hsl(0, 0%, 97%);
@@ -156,13 +155,12 @@ a{
     margin: 0;
     font-size: clamp(1rem, 3vw, 1.5rem);
     color: hsl(0, 0%, 67%);
-    margin: 0 8%;
+    margin: 2% 2%;
     line-height: 1.75;
 }
 .skills{
     display: flex;
     flex-direction: column;
-    margin: 0 8vw;
     width: 70vw;
     font-family: "Space Grotesk", sans-serif;
 }
@@ -181,10 +179,8 @@ a{
 .skills-title{
     display: flex;
     align-items: center;
-    padding: 1rem 1rem;
-    margin: 3% 5%;
+    padding: 0 2rem;
     font-size: clamp(1.5rem, 6vw, 2.25rem);
-    height: 12svh;
     border-bottom: 1px solid hsl(0, 0%, 97%);
 }
 .skills-container{
@@ -192,9 +188,9 @@ a{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 15svh;
+    height: fit-content;
     gap: 0 10vw;
-    margin: 0 8%;
+    margin: 2% 2%;
     color: #AAAAAA;
 }
 .skills-container p{
@@ -204,7 +200,6 @@ a{
     padding: 8px;
 }
 .expereince{
-    display: none;
     flex-direction: column;
     margin: 0 8vw;
     font-family: "Space Grotesk", sans-serif;
@@ -241,21 +236,20 @@ a{
     margin: 0 0;
     font-family: "Space Grotesk", sans-serif;
     width: 70vw;
-    margin-bottom: 8svh;
 }
 .projects-title{
     display: flex;
     align-items: center;
-    margin: 3% 5%;
     font-size: clamp(1rem, 6vw, 2.25rem);
-    height: 12svh;
     border-bottom: 1px solid hsl(0, 0%, 97%);
 }
+/* TODO: Improve this gap workaround. It's janky, but works for now. */
 .projects-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20dvh;
+    margin-top: 4rem;
+    gap: 10rem;
 }
 .projects{
     position: relative;
@@ -264,19 +258,18 @@ a{
     outline: 2px solid hsla(0, 0%, 100%, 0.2);
     width: clamp(250px, 50%, 700px);
     max-height: 525px;
-}
-#project1{
-    margin-top: 15vh;
+    overflow: hidden;
 }
 .project-img-wrapper{
     aspect-ratio: 4/3;
     width: 100%;
+    border-radius: 1rem;
     position: relative;
+    overflow: hidden;
 }
 .project-imgs{
     width: 100%;
     height: 100%;
-    border-radius: 20px;
     display: block;
     object-fit: cover;
     z-index: 0;
@@ -324,14 +317,14 @@ a{
         opacity: 0.2;
     }
     .projects:not(.expanded) .hover-overlay{
-        display: inline;
+        display: block;
         transition: opacity 0.3s ease;
     }
     .projects:not(.expanded):hover .hover-overlay{
         opacity: 0.8;
     }
     .projects:not(.expanded):hover .hover-text-container{
-        display: inline;
+        display: block;
         animation: text-slide-up 0.2s ease-in-out forwards;
         opacity: 0;
     }
@@ -341,36 +334,12 @@ a{
         transition: transform 1s, opacity 1s;
     }
 }
-@media (max-width: 900px) {
-    .hover-overlay{
-        opacity: 0.2;
-    }
-    .projects:not(.expanded) .hover-overlay{
-        display: inline;
-    }
-    .projects:not(.expanded):hover .hover-overlay{
-        opacity: 0;
-    }
-    .projects.projects:not(.expanded){
-        transition: transform 300ms;
-    }
-    .projects:not(.expanded):hover{
-        transform: scale(1.1);
-    }
-    .projects.hidden{
-        opacity: 0;
-        transform: none;
-        transition: opacity 1s;
-    }
-}
 @keyframes text-slide-up{
     from{transform: translateY(20px);}
     to{transform: translateY(0); opacity: 1;}
 }
 .click-items-container{
     display: none;
-    width: 100%;
-    height: 60%;
 }
 .click-description {
     display: none;
@@ -378,8 +347,7 @@ a{
     width: 80%;
     font-size: clamp(1.2rem, 2vw, 1.8rem);
     font-weight: normal;
-    padding-right: 10px;
-    margin-bottom: 4vh;
+    margin-bottom: 10%;
 }
 .click-description p{
     margin: 0;
@@ -412,22 +380,21 @@ a{
     align-items: center;
     flex-direction: column;
     max-height: 800px;
-    height: clamp(550px, 90svh, 800px);
     width: clamp(280px, 80%, 850px);
     transition: width 400ms ease-out;
 }
 .projects.expanded .project-img-wrapper{
     position: relative;
-    min-height: 120px;
+    min-height: 140px;
     width: clamp(160px, 40%, 530px);
     aspect-ratio: 4/3;
-    margin: 5vh 0;
+    margin-top: 10%;
 }
 .projects.expanded .project-imgs{
     opacity: 0.8;
 }
 .projects.expanded .click-description{
-    display: inline;
+    display: block;
     animation: fade-in 600ms linear forwards;
 }
 @keyframes fade-in{
@@ -436,14 +403,14 @@ a{
     100%{opacity: 1;}
 }
 .projects.expanded .github-button{
-    display: inline;
+    display: block;
 }
 .projects.expanded .click-items-container{
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 100%;
-    padding-bottom: 10%;
+    padding: 10% 0;
 }
 .projects-title.hidden{
     opacity: 0;
@@ -461,6 +428,11 @@ a{
 .main-txt.show{
     opacity: 1;
     transform: scale(1);
+}
+.projects.hidden{
+    opacity: 0;
+    transform: none;
+    transition: opacity 1s;
 }
 .projects.show{
     opacity: 1;
