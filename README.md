@@ -1,3 +1,4 @@
+(This is an out dated portfolio, Im going to remake it soon) 
 This is my portfolio website to showcase my skills and projects for any future clients
 
 I'm still working on this website and I plan to keep on improving it untill I'm satisfied with it.
